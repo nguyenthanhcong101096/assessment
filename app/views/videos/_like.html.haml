@@ -1,0 +1,7 @@
+.d-flex
+  .d-flex.pr-20.align-items-center
+    %img{ src: asset_path(current_like(video)), width: '30px', height: '30px', class: 'pr-4 like js-like', type: 'like' }
+    %p="#{video.count_likes} Likes"
+  .d-flex.align-items-center
+    %img{ src: asset_path(current_dislike(video)), width: '30px', height: '30px', class: 'pr-4 like js-like', type: 'dislike' }
+    %p="#{video.count_dislikes} Dislikes"

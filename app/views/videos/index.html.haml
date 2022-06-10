@@ -1,0 +1,6 @@
+.body
+  .d-flex.justify-content-between
+    %h1.ml-200 My Shared
+    %a.mr-200{href: '/videos/share'} Add
+  .container
+    = render partial: 'videos/item', collection: @videos, as: :video

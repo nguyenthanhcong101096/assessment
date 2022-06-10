@@ -1,0 +1,15 @@
+= link_to videos_path(id: video.video_id), class: 'card md-3' do
+  %iframe{:height => "201", :src => "https://www.youtube-nocookie.com/embed/#{video.video_id}", :width => "350"}
+  .card-body.text-wrap
+    %h5.card-title.text-wrap=video.video_title
+    %p.card-text=video.video_title
+    %p.card-text
+      %small.text-muted=video.created_at.strftime("%d/%m/%Y - %H:%M:%S")
+  .card-footer
+    .d-flex
+      .d-flex.pr-20.align-items-center
+        %img{ src: asset_path(current_like(video)), width: '30px', height: '30px', class: 'pr-4 like', type: 'like' }
+        %p="#{video.count_likes} Likes"
+      .d-flex.align-items-center
+        %img{ src: asset_path(current_dislike(video)), width: '30px', height: '30px', class: 'pr-4 like', type: 'dislike' }
+        %p="#{video.count_dislikes} Dislikes"

@@ -1,0 +1,10 @@
+.body.container
+  .d-flex
+    .left.w-800
+      %iframe{:height => "500", :src => "https://www.youtube-nocookie.com/embed/#{@video.video_id}", :width => "800"}
+      %input{type: 'hidden', id: 'videoId', value: @video.id}
+      %p.text-wrap.title=@video.video_title
+      .like-section
+        = render 'videos/like', video: @video
+    .right.list-video
+      = render partial: 'videos/item', collection: @videos, as: :video

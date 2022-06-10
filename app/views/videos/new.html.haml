@@ -1,0 +1,8 @@
+= render 'shared/alert', message: flash[:alert]
+
+#formCenter.justify-content-center.align-item-center
+  = form_with url: videos_path, method: :post, class: 'login', local: { remote: false } do |form|
+    .form-outline.mb-4
+      = form.text_field :url, type: "text", placeholder: 'https://www.youtube.com/watch?v=4A--joiIV-I', class: 'form-control', required: true
+
+    %input.btn.btn-primary.btn-block.w-100{:type => "submit", value: 'Share'}

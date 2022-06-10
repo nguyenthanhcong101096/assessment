@@ -1,0 +1,17 @@
+= render 'shared/alert', message: flash[:alert]
+
+#formCenter.justify-content-center.align-item-center
+  = form_with url: user_registration_path, method: :post, class: 'login', local: { remote: false } do |form|
+    .form-outline.mb-4
+      = form.text_field :email, type: 'email', class: 'form-control', required: true, placeholder: 'Email address'
+      %label.form-label{:for => "email"} Email address
+
+    .form-outline.mb-4
+      = form.text_field :password, type: 'password', class: 'form-control', required: true, placeholder: 'Password'
+      %label.form-label{:for => "password"} Password
+
+    .form-outline.mb-4
+      = form.text_field :confirmation_password, type: 'password', class: 'form-control', required: true, placeholder: 'Confirmation Password'
+      %label.form-label{:for => "confirmation_password"} Confirmation Password
+
+    %input.btn.btn-primary.btn-block.w-100{:type => "submit", value: 'Sign up'}

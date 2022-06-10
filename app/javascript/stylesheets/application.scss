@@ -1,0 +1,75 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.title {
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 25px;
+  overflow-wrap: break-word;
+}
+
+.ml-200 {
+  margin-left: 200px;
+}
+
+.mr-200 {
+  margin-right: 200px;
+}
+
+.list-video {
+  height: 1000px !important;
+  overflow: scroll;
+}
+
+.body {
+  padding: 48px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.card {
+  width: 350px !important;
+  margin: 2px;
+  margin-top: 0px;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.5)
+  }
+}
+
+#formCenter {
+  display: flex;
+
+  .login {
+    width: 500px;
+    margin-top: 15%;
+  }
+}
+
+.w-800 {
+  width: 800px;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+.pr-4 {
+  padding-right: 4px;
+}
+
+.like {
+  // &:hover {
+  //   content: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Love_Heart_symbol.svg/2250px-Love_Heart_symbol.svg.png");
+  // }
+}
